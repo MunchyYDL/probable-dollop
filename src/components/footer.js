@@ -4,10 +4,10 @@ export default function Footer() {
 
     return (
         <footer>
-            KONTAKT
-            erik@devbrains.se
-            +46760102104
-            ©2020 devbrains.se
+            <h1>KONTAKT</h1>
+            <p>erik@devbrains.se</p>
+            <p>+46760102104</p>
+            <p>©2020 devbrains.se</p>
         </footer>
     )
 }

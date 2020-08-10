@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.siteContainer {
+    display: grid;
+    grid-template-columns: 110px auto 110px;
+    grid-template-rows: 100px auto 220px;
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    padding: 30px 110px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+    display: grid;
+    place-items: center start;
+}
+header > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    padding: 30px 110px;
+    background-image: url(../../static/mountain.webp);
+    height: calc(100vh - 320px);
+    min-height: 460px;
+}
+main > .textBox {
+    display: grid;
+    place-items: center;
+    padding: 20px 150px;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #000;
+    padding: 30px 110px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+}
+footer > h1 {
+    margin: 0;
+    color: rgb(255, 192, 58);;
+    font-size: 40px;
+    line-height: 54px;
+    font-weight: bold;
+}
+footer > p {
+    font-size: 12px;
+}

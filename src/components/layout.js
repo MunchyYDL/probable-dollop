@@ -6,11 +6,11 @@ import Footer from "./footer"
 export default function Layout(props) {
 
     return (
-        <div>
+        <div className="siteContainer">
             <Header />
-            <div>
+            <main>
                 {props.children}
-            </div>
+            </main>
             <Footer />
         </div>
     )
