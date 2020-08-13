@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Global / Theme settings */
+
+    --primaryBackgroundColor: #000;
+    --secondaryBackgroundColor: #222;
+
+    --primaryColor: #fff;
+    --secondayColor: #999;
+
+    --headerHeight: 100px;
+    --footerHeight: 100px;
+    --mainHeight: calc(100vh - var(--headerHeight) - var(--footerHeight));
+}
+
+body {
+    background-color: var(--primaryBackgroundColor);
+    color: var(--primaryColor);
+
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+main {
+    grid-area: main;
+    padding: 30px 110px;
+    background-image: url(../images/bakgrund.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: var(--mainHeight);
+    min-height: 460px;
+}
+main > .textBox {
+    display: grid;
+    place-items: center;
+    padding: 20px 150px;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+}
