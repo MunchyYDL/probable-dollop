@@ -1,9 +1,10 @@
 .layout {
-    display: grid;
-    grid-template-columns: 110px auto 110px;
+    display: block;
+    /* display: grid; */
+    /* grid-template-columns: 110px auto 110px;
     grid-template-rows: auto auto auto;
     grid-template-areas: 
         "header header header"
         "main main main"
-        "footer footer footer";
+        "footer footer footer"; */
 }

@@ -1,19 +1,20 @@
-* {
-    box-sizing: border-box;
-}
-
 :root {
     /* Global / Theme settings */
-
     --primaryBackgroundColor: #000;
     --secondaryBackgroundColor: #222;
 
     --primaryColor: #fff;
     --secondayColor: #999;
+    --menuBackgroundColor: rgba(0,0,0, 0.4);
 
-    --headerHeight: 100px;
+    --headerHeight: 0px;
     --footerHeight: 100px;
-    --mainHeight: calc(100vh - var(--headerHeight) - var(--footerHeight));
+    --mainHeight: 100vh;
+    /* --mainHeight: calc(100vh - var(--headerHeight) - var(--footerHeight)); */
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -26,11 +27,11 @@ body {
 }
 
 main {
-    grid-area: main;
+    /* grid-area: main; */
     padding: 30px 110px;
     background-image: url(../images/bakgrund.jpg);
     background-attachment: fixed;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     height: var(--mainHeight);
     min-height: 460px;
