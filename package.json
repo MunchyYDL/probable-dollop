@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "devbrains-homepage",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A simple static homepage built with gatsby.",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
