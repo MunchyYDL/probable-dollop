@@ -7,34 +7,26 @@ export default function Contact() {
 
     return (
         <Layout>
+
             <h1>Kontakta oss!</h1>
             <div className={`contact ${styles.contact}`}>
 
                 <div>
-                    <p>Norrköping, Linköping, Stockholm &amp; distans</p>
-                    <h2>Erik Fremred</h2>
-                    <p>erik@devbrains.se</p>
-                    <p>+46760102104</p>
+                    <h2>Norrköping, Linköping, Stockholm &amp; distans</h2>
+                    <h3>Erik Fremred</h3>
+                    <p>+46 76 010 21 04</p>
+                    <p>erik.fremred@devbrains.se</p>
                 </div>
 
                 <div>
-                    <p>Göteborg &amp; distans</p>
-                    <h2>Sofie Askenbom</h2>
+                    <h2>Göteborg &amp; distans</h2>
+                    <h3>Sofie Askenbom</h3>
+                    <p>+46 70 874 20 71</p>
                     <p>sofie.askenbom@devbrains.se</p>
-                    <p>phone</p>
                 </div>
 
             </div>
 
-
-{/* 
-Kontakta oss!
-Norrköping, Linköping, Stockholm och distans
-Erik Fremred kontaktuppgifter 
-Göteborg och distans
-Sofie Askenbom kontaktuppgifter
-
-*/}
         </Layout>
     )
 }
