@@ -1,10 +1,18 @@
 .layout {
     display: block;
-    /* display: grid; */
-    /* grid-template-columns: 110px auto 110px;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: 
-        "header header header"
-        "main main main"
-        "footer footer footer"; */
+}
+
+.layout main {
+    padding: 30px 500px 30px 200px;
+    background-image: url(../images/back.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: var(--mainHeight);
+    min-height: 460px;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: calc(-1 * var(--footerHeight));
 }

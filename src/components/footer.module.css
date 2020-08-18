@@ -3,12 +3,8 @@
     top: calc(100vh - var(--footerHeight));
     height: var(--footerHeight);
     width: 100%;
+    padding: 30px 500px 30px 200px;
     
-    /* grid-area: footer; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
     background-color: var(--menuBackgroundColor);
 }
 
@@ -36,14 +32,11 @@
     border-bottom-color: rgb(22, 115, 125);
 }
 
-.nav {
-    width: 100%;
-}
-
 .nav > ul {
     width: 100%;
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 0;
+    padding: 0;
 }

@@ -10,17 +10,17 @@
     --headerHeight: 0px;
     --footerHeight: 100px;
     --mainHeight: 100vh;
-    /* --mainHeight: calc(100vh - var(--headerHeight) - var(--footerHeight)); */
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    font-weight: 200;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
-    /* text-transform: uppercase; */
+    font-weight: 200;
 }
 
 body {
@@ -30,22 +30,4 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
-
-main {
-    /* grid-area: main; */
-    padding: 30px 110px;
-    background-image: url(../images/bakgrund.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: var(--mainHeight);
-    min-height: 460px;
-}
-main > .textBox {
-    display: grid;
-    place-items: center;
-    padding: 20px 150px;
-    background-color: rgba(0, 0, 0, 0.4);
-    height: 100%;
 }
