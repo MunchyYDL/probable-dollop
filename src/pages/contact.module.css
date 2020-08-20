@@ -4,5 +4,24 @@
 
 .contact .addresses {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 700px) {
+    .contact .addresses {
+        flex-direction: column;
+    }
+}
+
+.contact .addresses h3 {
+    margin: 0;
+}
+
+.contact .addresses h3 + p {
+    margin: 0;
+}
+
+.contact img {
+    width: 100px;
 }

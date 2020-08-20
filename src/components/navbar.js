@@ -1,13 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import styles from "./header.module.css"
+import styles from "./navbar.module.css"
 
-export default function Header() {
+export default function NavBar() {
 
     return (
-        <header className={`header ${styles.header}`}>
-            <Link className={styles.logo} to="/">/DEV/BRAINS</Link>
+        // <footer className={`navbar ${styles.navbar}`}>
             <nav className={styles.nav}>
                 <ul>
                     <li><Link className={styles.link} activeClassName={styles.activeLink} to="/">Hem</Link></li>
@@ -17,6 +16,6 @@ export default function Header() {
                     <li><Link className={styles.link} activeClassName={styles.activeLink} to="/contact">Kontakta oss!</Link></li>
                 </ul>
             </nav>
-        </header>
+        // </footer>
     )
 }
