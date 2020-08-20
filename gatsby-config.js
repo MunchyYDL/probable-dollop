@@ -17,7 +17,7 @@ module.exports = {
             weights: ['200..700']
           },
           {
-            family: 'Raleway',
+            family: 'Jost',
             variable: true,
             weights: ['100..900', '100..900']
           },

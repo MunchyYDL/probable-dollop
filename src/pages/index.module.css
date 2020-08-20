@@ -1,11 +1,13 @@
 .index h1 {
     font-size: 120px;
+    font-weight: 100;
     margin: 0;
     padding: 0;
 }
 
 .index h2 {
     font-size: 30px;
+    font-weight: 100;
     text-transform: uppercase;
     text-align: center;
     margin: 0;
