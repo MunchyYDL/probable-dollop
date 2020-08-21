@@ -36,16 +36,6 @@
     }
 }
 
-@media only screen and (max-width: 700px) {
-    .index h1 {
-        font-size: 90px;
-    }
-
-    .index h2 {
-        font-size: 20px;
-    }
-}
-
 @media only screen and (max-width: 768px) {
     .index h1 {
         font-size: 100px;
@@ -56,6 +46,16 @@
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .index h1 {
+        font-size: 80px;
+    }
+
+    .index h2 {
+        font-size: 20px;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .index h1 {
         font-size: 60px;
@@ -63,5 +63,15 @@
 
     .index h2 {
         font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .index h1 {
+        font-size: 40px;
+    }
+
+    .index h2 {
+        font-size: 12px;
     }
 }

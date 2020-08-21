@@ -1,15 +1,6 @@
 .layout {
     display: grid;
     place-items: center;
-    /* background-color: #345; */
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-    "main"; */
-    /* margin: auto;
-    max-width: 1200px;
-    max-height: 800px; */
     height: 100vh;
     width: 100vw;
     background-color: #445566;
@@ -36,14 +27,10 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    /* .layout {
-        margin: 0 auto;
-        max-width: 1200px
-    } */
 } 
 
 .layout main {
-    padding: 0 20vw 0 10vw;
+    padding: 0 20% 0 10%;
     background-image: url(../images/back.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -55,23 +42,20 @@
     padding-top: calc(-1 * var(--footerHeight));
 
     text-align: justify;
+
+    /* Debugging */
+    transition-duration: 400ms;
+    transition-property: padding;
 }
 
 @media only screen and (max-width: 700px) {
-    /* .layout {
-        grid-template-columns: 2fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: 
-        "menu"
-        "main";
-    } */
     .layout main {
-        padding: 0 10vw;
+        padding: 0 10%;
     }
 }
 
 @media only screen and (max-width: 500px) {
     .layout main {
-        padding: 0 5vw 0 5vw;
+        padding: 0 5%;
     }
 }
