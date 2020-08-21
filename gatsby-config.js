@@ -8,6 +8,15 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
