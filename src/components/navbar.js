@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import styles from "./navbar.module.css"
 
-export default function NavBar() {
+export function NavBar() {
 
     return (
         <nav className={styles.nav}>

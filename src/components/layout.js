@@ -1,9 +1,9 @@
 import React from "react"
 
-import NavBar from "./navbar"
+import { NavBar } from "./"
 import styles from "./layout.module.css"
 
-export default function Layout(props) {
+export function Layout(props) {
 
     return (
         <div className={`layout ${styles.layout}`}>

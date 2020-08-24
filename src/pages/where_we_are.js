@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/layout"
+import { Layout }  from "../components"
 
 export default function WhereWeAre() {
 
@@ -14,7 +14,7 @@ export default function WhereWeAre() {
                 </i></p>
 
                 <p>
-                    Vi finns på plats i Norrköping, Linköping, Stockholm och Göteborg
+                    Vi finns på plats i Norrköping, Linköping, Stockholm &amp; Göteborg
                     men är självklart flexibla för uppdrag på annan ort alternativt distans.
                 </p>
             </div>
