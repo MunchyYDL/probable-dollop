@@ -11,7 +11,7 @@ export default function Contact({ data }) {
     <Layout>
       <div className={`contact ${styles.contact}`}>
         <h1>Kontakta oss!</h1>
-        <p>Vi finns på plats på ett flertal orter, men tar även gärna uppdrag på distans.</p>
+        <p>Vi finns på ett flertal orter, men tar även gärna uppdrag på distans.</p>
         <div className={styles.addresses}>
 
           <div>

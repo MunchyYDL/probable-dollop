@@ -3,8 +3,6 @@
     place-items: center;
     height: 100vh;
     width: 100vw;
-
-    background-color: #445566;
 }
 
 .layout .container {
@@ -19,18 +17,17 @@
     width: 100%;
     max-width: 1200px;
     height: 900px;
-    background-color: #fff;
 }
 
 .layout main {
     grid-area: main;
     position: relative;
     padding: 0 20% 0 20%;
-    background-color: #789abc;
-    /* background-image: url(../images/back.jpg);
+    /* background-color: #789abc; */
+    background-image: url(../images/back.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 
     width: 100%;
 
