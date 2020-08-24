@@ -1,0 +1,8 @@
+
+.person h3 {
+    margin: 0;
+    padding: 0;
+}
+.person h3 + p {
+    margin: 0;
+}
