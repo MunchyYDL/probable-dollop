@@ -1,30 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 
-import Layout from "../components/layout"
+import { Person, Layout } from "../components"
+
 import styles from "./contact.module.css"
 
-export const query = graphql`
-    query {
-        erik: file(relativePath: {eq: "people/ErikFremred.jpg"}) {
-          childImageSharp {
-            fixed(width: 100) {
-                ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      
-        sofie: file(relativePath: {eq: "people/SofieAskenbom.jpg"}) {
-          childImageSharp {
-            fixed(width: 100) {
-                ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }`;
-
-export default function Test({data}){
+export default function Contact({data}){
     return (
 
         <Layout>
@@ -34,23 +15,13 @@ export default function Test({data}){
                 <div className={styles.addresses}>
 
                     <div>
-                        <h2>Norrköping, Linköping, Stockholm</h2>
-                        <Img fixed={data.erik.childImageSharp.fixed} alt="Erik Fremred" />
-                        <h3>Erik Fremred</h3>
-                        <p>
-                            +46 76 010 21 04<br/>
-                            erik.fremred@devbrains.se
-                        </p>
+                        <h2>Göteborg</h2>
+                        <Person person={data.sofie} />
                     </div>
 
                     <div>
-                        <h2>Göteborg</h2>
-                        <Img fixed={data.sofie.childImageSharp.fixed} alt="Sofie Askenbom" />
-                        <h3>Sofie Askenbom</h3>
-                        <p>
-                            +46 70 874 20 71<br/>
-                            sofie.askenbom@devbrains.se
-                        </p>
+                        <h2>Norrköping, Linköping, Stockholm</h2>
+                        <Person person={data.erik} />
                     </div>
 
                 </div>
@@ -58,3 +29,28 @@ export default function Test({data}){
         </Layout>
     )
 }
+
+export const personQuery = graphql`
+fragment PersonDetails on Person {
+  name
+  email
+  phone
+  showContactInfo
+  location
+  image {
+    childImageSharp {
+      fixed(width: 200) {
+          ...GatsbyImageSharpFixed
+      }
+    }
+  }
+}
+  
+{
+  erik: person(name: {eq: "Erik Fremred"}) {
+    ...PersonDetails
+  }
+  sofie: person(name: {eq: "Sofie Askenbom"}) {
+    ...PersonDetails
+  }
+}`;
