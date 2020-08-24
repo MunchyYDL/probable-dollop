@@ -12,11 +12,11 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
          * Image node
          */
 
-        // 1. name, extension and absolute path are required to build a file node
+        // Name, extension and absolute path are required to build a file node
         const imageFile = { name, ext } = path.parse(person.image);
         const absolutePath = path.resolve(__dirname, IMAGE_PATH, person.image);
 
-        // 2. Build a data shape that corresponds to a file node that Sharp can process
+        // Build a data shape that corresponds to a file node that Sharp can process
         const imageData = {
             name: imageFile.name,
             ext: imageFile.ext,
@@ -24,7 +24,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             extension: imageFile.ext.substring(1), // <-- required, remove the dot in 'ext'
         };
 
-        // 3. Build the image node
+        // Build the image node
         const imageNode = {
             ...imageData,
             id: createNodeId(`person-image-${imageFile.name}`),
@@ -34,21 +34,21 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             },
         };
 
-        // 4. Create the node. When imageNode is created,
-        //    Sharp adds childImageSharp to the node, yay! :)
+        // Create the node. When imageNode is created, Sharp adds childImageSharp to the node, yay! :)
         actions.createNode(imageNode);
 
         /*
          * Person node
          */
 
-        // 1. Extract the data
+        // Extract the data
         const personData = {
             name,
             email,
             phone,
             showContactInfo,
             location,
+            workTitle,
         } = person;
 
         // Just read the JSON and put it in?
@@ -56,10 +56,10 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
         //     ...person
         // };
             
-        // 2. Build the Person node
+        // Build the Person node
         const personNode = {
             ...personData,
-            image: imageNode,  // 5. Add the image node to our Person node. :)
+            image: imageNode,  // <-- Add the image node to our Person node. :)
             id: createNodeId(`person-${name}`),
             internal: {
                 type: 'Person',
@@ -67,7 +67,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             },
         }
 
-        // 3. Create the node
+        // Create the node
         actions.createNode(personNode);
     });
 };

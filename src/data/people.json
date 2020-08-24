@@ -2,26 +2,47 @@
     {
         "name": "Andreas Edfast",
         "image": "AndreasEdfast.jpg",
-        "email": "andreas.edfast@devbrains.se"
+
+        "email": "andreas.edfast@devbrains.se",
+
+        "location": "Stockholm",
+
+        "workTitle" : "Systemutvecklare"
+
     },
     {
         "name": "Andreas Ingman",
         "image": "AndreasIngman.jpg",
-        "email": "andreas.ingman@devbrains.se"
+
+        "email": "andreas.ingman@devbrains.se",
+
+        "location": "Stockholm",
+
+        "workTitle" : "Systemutvecklare"
+
     },
     {
         "name": "Erik Fremred",
         "image": "ErikFremred.jpg",
+
         "email": "erik.fremred@devbrains.se",
         "phone": "+46 76 010 21 04",
-        "location": "Linköping",
-        "showContactInfo": true
+        "showContactInfo": true,
+
+        "location": "Norrköping",
+
+        "workTitle" : "Systemutvecklare"
+
     },
     {
         "name": "Johan Karlsteen",
         "image": "JohanKarlsteen.jpg",
 
-        "email": "johan.karlsteen@devbrains.se"
+        "email": "johan.karlsteen@devbrains.se",
+
+        "location": "Linköping",
+
+        "workTitle" : "Systemutvecklare"
     },
     {
         "name": "Marcus Christensen",
@@ -31,18 +52,18 @@
         "email": "marcus.christensen@devbrains.se",
         "phone": "+46 733 400 370",
 
-        "workTitle": "Fullstack Software Engineer",
+        "workTitle" : "Systemutvecklare",
 
-        "geo": {
-            "location": "Göteborg",
-            "region": "Väst"
-        }
+        "location": "Göteborg",
+        "region": "Väst"
     },
     {
         "name": "Martin Oom",
         "image": "MartinOom.jpg",
 
         "email": "martin.oom@devbrains.se",
+
+        "workTitle" : "Systemutvecklare",
 
         "location": "Göteborg",
         "region": "Väst"
@@ -54,6 +75,8 @@
         "email": "sofie.askenbom@devbrains.se",
         "phone": "+46 70 874 20 71",
         "showContactInfo": true,
+
+        "workTitle" : "Projektledare & Agile Coach",
 
         "location": "Göteborg",
         "region": "Väst"
