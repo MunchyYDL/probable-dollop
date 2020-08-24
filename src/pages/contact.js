@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { Person, Layout } from "../components"
+import { Layout, Person } from "../components"
 
 import styles from "./contact.module.css"
 
@@ -15,13 +15,13 @@ export default function Contact({data}){
                 <div className={styles.addresses}>
 
                     <div>
-                        <h2>Göteborg</h2>
-                        <Person person={data.sofie} />
+                        <h2>Region Väst - Göteborg</h2>
+                        <Person person={data.sofie} showContactInfo={true} />
                     </div>
 
                     <div>
-                        <h2>Norrköping, Linköping, Stockholm</h2>
-                        <Person person={data.erik} />
+                        <h2>Region Öst - Norrköping, Linköping &amp; Stockholm</h2>
+                        <Person person={data.erik} showContactInfo={true}/>
                     </div>
 
                 </div>
@@ -36,11 +36,12 @@ fragment PersonDetails on Person {
   email
   phone
   showContactInfo
+  workTitle
   location
   image {
     childImageSharp {
       fixed(width: 200) {
-          ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed        
       }
     }
   }

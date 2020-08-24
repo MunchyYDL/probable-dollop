@@ -13,15 +13,3 @@
         flex-direction: column;
     }
 }
-
-.contact .addresses h3 {
-    margin: 0;
-}
-
-.contact .addresses h3 + p {
-    margin: 0;
-}
-
-.contact img {
-    width: 100px;
-}
