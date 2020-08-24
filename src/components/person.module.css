@@ -1,4 +1,9 @@
 
+.person {
+    margin: 10px 0;
+    /* width: 200px; */
+}
+
 .person h3 {
     margin: 0;
     padding: 0;

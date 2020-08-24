@@ -18,7 +18,6 @@ export function Person({person, showContactInfo = false}) {
         const image = person.image.childImageSharp && person.image.childImageSharp.fixed;
 
     return (
-
         <div className={styles.person}>
             <Img fixed={image} alt={person.name} />
             <h3>{person.name}</h3>

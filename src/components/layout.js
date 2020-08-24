@@ -8,10 +8,10 @@ export function Layout(props) {
     return (
         <div className={`layout ${styles.layout}`}>
             <div className={styles.container}>
+                <NavBar />
                 <main>
                     {props.children}
                 </main>
-                <NavBar />
             </div>
         </div>
     )

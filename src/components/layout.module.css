@@ -3,59 +3,91 @@
     place-items: center;
     height: 100vh;
     width: 100vw;
+
     background-color: #445566;
 }
 
-/* iPad with portrait orientation. */
-/* @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
-    .layout {
-        background-color: #aa5566;
-    }
-} */
-/* iPad with landscape orientation. */
-/* @media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {                         
-    .layout {
-        background-color: #4455aa;
-    }
-} */
-
 .layout .container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100px;
+    grid-template-areas: 
+        "main"
+        "menu";
+
     width: 100%;
-    height: 100%;
-    max-width: 1600px;
-    max-height: 1024px;
+    max-width: 1200px;
+    height: 900px;
+    background-color: #fff;
 }
 
-@media only screen and (max-width: 1200px) {
-} 
-
 .layout main {
-    padding: 0 20% 0 10%;
-    background-image: url(../images/back.jpg);
+    grid-area: main;
+    position: relative;
+    padding: 0 20% 0 20%;
+    background-color: #789abc;
+    /* background-image: url(../images/back.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
+    background-repeat: no-repeat; */
 
-    display: flex;
-    align-items: center;
-    padding-top: calc(-1 * var(--footerHeight));
+    width: 100%;
+
+    display: grid;
+    place-items: center;
 
     text-align: justify;
 
     /* Debugging */
     transition-duration: 400ms;
     transition-property: padding;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
-@media only screen and (max-width: 700px) {
+.layout main > div {
+    width: 100%;
+    padding: 20px 0 50px 0;
+}
+
+@media only screen and (max-width: 1150px) {
+
     .layout main {
-        padding: 0 10%;
+        padding: 0 15% 0 15%;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .layout main {
+        padding: 0 10% 0 10%;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    .layout .container {
+
+        grid-template-rows: 38px 1fr;
+        grid-template-areas: 
+            "menu"
+            "main";
+
+        height: 100%;
+    }
+
+    .layout main {
+        padding: 0 10% 0 10%;
+        height: 100%;
     }
 }
 
 @media only screen and (max-width: 500px) {
+
     .layout main {
-        padding: 0 5%;
+        padding: 0 5% 0 5%;
     }
 }

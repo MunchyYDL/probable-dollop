@@ -5,29 +5,33 @@ import { Layout, Person } from "../components"
 
 import styles from "./contact.module.css"
 
-export default function Contact({data}){
-    return (
+export default function Contact({ data }) {
+  return (
 
-        <Layout>
-            <div className={`contact ${styles.contact}`}>
-                <h1>Kontakta oss!</h1>
-                <p>Vi finns på plats på dessa orter, men tar även gärna uppdrag på distans.</p>
-                <div className={styles.addresses}>
+    <Layout>
+      <div className={`contact ${styles.contact}`}>
+        <h1>Kontakta oss!</h1>
+        <p>Vi finns på plats på ett flertal orter, men tar även gärna uppdrag på distans.</p>
+        <div className={styles.addresses}>
 
-                    <div>
-                        <h2>Region Väst - Göteborg</h2>
-                        <Person person={data.sofie} showContactInfo={true} />
-                    </div>
-
-                    <div>
-                        <h2>Region Öst - Norrköping, Linköping &amp; Stockholm</h2>
-                        <Person person={data.erik} showContactInfo={true}/>
-                    </div>
-
-                </div>
+          <div>
+            <div>
+              <h2>Region Väst</h2>
+              <h4>Göteborg</h4>
             </div>
-        </Layout>
-    )
+            <Person person={data.sofie} showContactInfo={true} />
+          </div>
+          <div>
+            <div>
+              <h2>Region Öst</h2>
+              <h4>Norrköping, Linköping & Stockholm</h4>
+            </div>
+            <Person person={data.erik} showContactInfo={true} />
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
 }
 
 export const personQuery = graphql`
@@ -40,7 +44,7 @@ fragment PersonDetails on Person {
   location
   image {
     childImageSharp {
-      fixed(width: 200) {
+      fixed(width: 150) {
         ...GatsbyImageSharpFixed        
       }
     }
