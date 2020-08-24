@@ -1,26 +1,54 @@
+@media only screen and (prefers-color-scheme: dark) {
+
+    :root {
+        /* Global / Theme settings */
+        --primaryBackgroundColor: #050505;
+        --primaryColor: #f9f9f9;
+
+        --menuBackgroundColor: #333;
+        --linkColor: #888;
+        --accentColor: rgb(22, 115, 125);
+
+        --headerHeight: 0px;
+        --footerHeight: 100px;
+        --mainHeight: 100vh;
+
+        --fontWeight: 200;
+    }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+
+    :root {
+        /* Global / Theme settings */
+        --primaryBackgroundColor: #f9f9f9;
+        --primaryColor: #050505;
+
+        --menuBackgroundColor: #888;
+        --linkColor: #333;
+        --accentColor: rgb(20, 103, 112);
+
+        --headerHeight: 0px;
+        --footerHeight: 100px;
+        --mainHeight: 100vh;
+
+        --fontWeight: 300;
+    }
+}
+
 :root {
-    /* Global / Theme settings */
-    --primaryBackgroundColor: #000;
-    --secondaryBackgroundColor: #222;
-
-    --primaryColor: #fff;
-    --secondayColor: #999;
-    --menuBackgroundColor: #333;
-
-    --headerHeight: 0px;
-    --footerHeight: 100px;
-    --mainHeight: 100vh;
+    color-scheme: light dark;
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
-    font-weight: 200;
+    font-weight: var(--fontWeight);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
-    font-weight: 200;
+    font-weight: var(--fontWeight);;
 }
 
 body {

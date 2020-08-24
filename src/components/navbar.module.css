@@ -108,7 +108,7 @@
  }
 
 .link {
-    color: #888;
+    color: var(--linkColor);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
@@ -119,17 +119,17 @@
     border-bottom: 3px solid transparent;
 }
 .link:hover {
-    border-bottom-color: #888;
+    border-bottom-color: var(--linkColor);
     transition-duration: var(--animDuration);
 }
 
 .activeLink {
     cursor: default;
     transition-duration: var(--animDuration);
-    border-bottom-color: rgb(22, 115, 125);
+    border-bottom-color: var(--accentColor);
 }
 .activeLink:hover {
-    border-bottom-color: rgb(22, 115, 125);
+    border-bottom-color: var(--accentColor);
 }
 
 @media only screen and (max-width: 750px) {
