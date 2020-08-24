@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Andreas Edfast",
+        "image": "AndreasEdfast.jpg",
+        "email": "andreas.edfast@devbrains.se"
+    },
+    {
+        "name": "Andreas Ingman",
+        "image": "AndreasIngman.jpg",
+        "email": "andreas.ingman@devbrains.se"
+    },
+    {
+        "name": "Erik Fremred",
+        "image": "ErikFremred.jpg",
+        "email": "erik.fremred@devbrains.se",
+        "phone": "+46 76 010 21 04",
+        "location": "Linköping",
+        "showContactInfo": true
+    },
+    {
+        "name": "Johan Karlsteen",
+        "image": "JohanKarlsteen.jpg",
+
+        "email": "johan.karlsteen@devbrains.se"
+    },
+    {
+        "name": "Marcus Christensen",
+        "image": "MarcusChristensen.jpg",
+        "dateOfBirth": "1975-08-29",
+
+        "email": "marcus.christensen@devbrains.se",
+        "phone": "+46 733 400 370",
+
+        "workTitle": "Fullstack Software Engineer",
+
+        "geo": {
+            "location": "Göteborg",
+            "region": "Väst"
+        }
+    },
+    {
+        "name": "Martin Oom",
+        "image": "MartinOom.jpg",
+
+        "email": "martin.oom@devbrains.se",
+
+        "location": "Göteborg",
+        "region": "Väst"
+    },
+    {
+        "name": "Sofie Askenbom",
+        "image": "SofieAskenbom.jpg",
+
+        "email": "sofie.askenbom@devbrains.se",
+        "phone": "+46 70 874 20 71",
+        "showContactInfo": true,
+
+        "location": "Göteborg",
+        "region": "Väst"
+    }
+]
