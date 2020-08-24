@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { Layout, Person }  from "../components"
+import { Layout, Person } from "../components"
+
+import styles from "./who_we_are.module.css"
 
 function getPerson(data, name) {
     return data.find(x => x.node.name === name).node;
@@ -13,17 +15,17 @@ export default function WhoWeAre({data}) {
 
     return (
         <Layout>
-            <div>
+            <div className={styles.who_we_are}>
                 <h1>Vilka vi är</h1>
-                <h2>Region Väst (Göteborg)</h2>
-                <div className="displayFlex">
+                <h2>Region Väst</h2>
+                <div className={styles.displayFlex}>
                     <Person person={getPerson(people, "Sofie Askenbom")}/>
                     <Person person={getPerson(people, "Marcus Christensen")}/>
                     <Person person={getPerson(people, "Martin Oom")}/>
                 </div>
 
-                <h2>Region Öst (Norrköping, Linköping, Stockholm)</h2>
-                <div className="displayFlex">
+                <h2>Region Öst</h2>
+                <div className={styles.displayFlex}>
                     <Person person={getPerson(people, "Erik Fremred")}/>
                     <Person person={getPerson(people, "Andreas Edfast")}/>
                     <Person person={getPerson(people, "Andreas Ingman")}/>
@@ -47,12 +49,13 @@ export default function WhoWeAre({data}) {
     )
 }
 
-export const personQuery = graphql`
+export const peopleQuery = graphql`
 fragment PersonDetails_smallImage on Person {
     name
     email
     phone
     showContactInfo
+    workTitle
     location
     image {
       childImageSharp {
@@ -63,7 +66,7 @@ fragment PersonDetails_smallImage on Person {
     }
   }
   
-  {
+  query People {
     allPerson {
       edges {
         node {
