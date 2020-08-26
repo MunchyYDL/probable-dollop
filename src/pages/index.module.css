@@ -4,6 +4,13 @@
     width: 100%;
 }
 
+.index svg {
+    display: block;
+    margin: auto;
+    width: 80%;
+    fill: currentColor;
+}
+
 .index h1 {
     font-size: 110px;
     font-weight: 100;
@@ -20,45 +27,41 @@
 
 /* DEBUGGING */
 .index h1, .index h2 {
-    transition-property: font-size;
+    transition-property: font-size, width;
     transition-duration: 400ms;
 }
 
 @media only screen and (max-width: 768px) {
+    .index svg {
+        width: 95%;
+    }
     .index h1 {
         font-size: 100px;
     }
-
-    .index h2 {
-        font-size: 24px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .index h1 {
-        font-size: 100px;
-    }
-
     .index h2 {
         font-size: 24px;
     }
 }
 
 @media only screen and (max-width: 700px) {
+    .index svg {
+        width: 95%;
+    }
     .index h1 {
         font-size: 80px;
     }
-
     .index h2 {
         font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 500px) {
+    .index svg {
+        width: 80%;
+    }
     .index h1 {
         font-size: 60px;
     }
-
     .index h2 {
         font-size: 15px;
     }
