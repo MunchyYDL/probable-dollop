@@ -1,8 +1,11 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import { Layout }  from "../components"
 
-export default function WhereWeAre() {
+export default function WhereWeAre( {data} ) {
+
+    // const background = data.background.childImageSharp.fluid ?? null;
 
     return (
         <Layout>
@@ -21,3 +24,15 @@ export default function WhereWeAre() {
         </Layout>
     )
 }
+
+export const query = graphql`
+{
+    background: file(relativePath: {eq: "back.jpg"}) {
+        childImageSharp {
+            fluid(quality: 90, maxWidth: 1200) {
+                ...GatsbyImageSharpFluid_withWebp
+            }
+        }
+    }
+}
+`;
