@@ -3,7 +3,8 @@
 }
 .nav {
     grid-area: menu;
-    position: relative;
+    position: fixed;
+    top: calc(100vh - 100px);
     height: var(--footerHeight);
     width: 100%;
     z-index: 2;
@@ -18,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    margin: 0 10%;
+    margin: 0 20% 0 10%;
     padding: 0;
     list-style: none;
 }
@@ -55,7 +56,7 @@
     top: 4px;
     left: 8px;
 
-    background: #cdcdcd;
+    background: var(--menuLinkColor);
     border-radius: 3px;
 
     z-index: 1;
@@ -136,6 +137,7 @@
 @media only screen and (max-width: 750px) {
     .nav {
         height: 38px;
+        top: 0px;
     }
 
     .nav .menuToggle {

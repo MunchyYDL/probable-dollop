@@ -7,17 +7,16 @@
 
 .layout .container {
     display: grid;
-
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 100px;
-    grid-template-areas: 
+    grid-template-rows: calc(100vh - 100px) 100px;
+    grid-template-areas:
         "main"
         "menu";
-
     width: 100%;
-    max-width: 1200px;
-    height: 900px;
+    height: 100%;
 }
+
+
 
 .layout main {
     grid-area: main;
@@ -30,6 +29,8 @@
 
     text-align: justify;
 
+    background-color: rgba(52, 70, 150, 0.6);
+
     /* Debugging */
     transition-duration: 400ms;
     transition-property: padding;
@@ -37,9 +38,16 @@
     overflow-x: hidden;
 }
 
+/* .layout svg {
+    width: 50%;
+    right: 100px;
+    display: block;
+} */
+
 .layout main > div {
     width: 100%;
     padding: 20px 0 50px 0;
+    background-color: rgba(173, 37, 167, 0.6);
 }
 
 @media only screen and (max-width: 1150px) {
