@@ -22,13 +22,7 @@
 .layout main {
     grid-area: main;
     position: relative;
-    padding: 0 20% 0 20%;
-    /* background-color: #789abc; */
-    background-image: url(../images/back.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-
+    padding: 0 20% 0 10%;
     width: 100%;
 
     display: grid;
