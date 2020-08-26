@@ -1,5 +1,6 @@
 
 .person {
+    width: 200px;
     margin: 10px 0;
 }
 
@@ -9,4 +10,10 @@
 }
 .person h3 + p {
     margin: 0;
+}
+
+.person a {
+    font-size: 0.9rem;
+    color: var(--linkColor);
+    text-decoration: none;
 }

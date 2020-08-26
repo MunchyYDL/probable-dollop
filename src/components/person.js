@@ -8,8 +8,8 @@ export function Person({person, showContactInfo = false}) {
         const contactDetails = showContactInfo && person.showContactInfo
         ? (
             <p>
-                {person.phone}<br/>
-                {person.email}<br/>
+                <a href={`tel:${person.phone}`}>{person.phone}</a><br/>
+                <a href={`mailto:${person.email}`}>{person.email}</a><br/>
             </p>
         )
         : null;
