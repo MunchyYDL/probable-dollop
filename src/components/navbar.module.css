@@ -13,6 +13,7 @@
     background-color: var(--menuBackgroundColor);
 }
 .menu {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,7 +109,7 @@
  }
 
 .link {
-    color: var(--linkColor);
+    color: var(--menuLinkColor);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 400;
@@ -119,7 +120,7 @@
     border-bottom: 3px solid transparent;
 }
 .link:hover {
-    border-bottom-color: var(--linkColor);
+    border-bottom-color: var(--menuLinkColor);
     transition-duration: var(--animDuration);
 }
 
