@@ -16,8 +16,6 @@
     height: 100%;
 }
 
-
-
 .layout main {
     grid-area: main;
     position: relative;
@@ -65,13 +63,12 @@
     }
 }
 
-
 @media only screen and (max-width: 750px) {
 
     .layout .container {
 
         grid-template-rows: 38px 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "menu"
             "main";
 
