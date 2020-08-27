@@ -1,0 +1,23 @@
+
+.where_we_are {
+    position: relative;
+    height: 800px;
+}
+
+.where_we_are .text {
+    z-index: 100;
+}
+
+.where_we_are svg {
+    z-index: 10;
+    position: absolute;
+    width: 70%;
+    top: -200px;
+    left: 15%;
+    display: block;
+    margin: auto;
+    /* background-color: rgba(0,0,0,0.9); */
+    fill: url(#gray-south-gradient) white;
+    transform: perspective(1000px) rotateX(45deg) scaleX(2.0);
+    transform-origin: bottom center;
+}

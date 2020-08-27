@@ -6,10 +6,13 @@
     --contentBackgroundColor: transparent;
 
     --linkColor: #d6cdf0;
-
-    --menuBackgroundColor: #333;
-    --menuLinkColor: #888;
     --accentColor: rgb(22, 115, 125);
+
+    --linkColor: #d29100;
+    --accentColor: #d29100;
+
+    --menuBackgroundColor: rgba(0, 0, 0, 0.9);
+    --menuLinkColor: #888;
 
     --mainHeight: 100vh;
     --mainMaxWidth: 800px;
@@ -37,6 +40,9 @@
         --linkColor: orange;
         --accentColor: orange;
 
+        --linkColor: #d29100;
+        --accentColor: #d29100;
+
         --menuBackgroundColor: rgba(0, 0, 0, 0.9);
         --menuLinkColor: #888;
 
@@ -52,6 +58,10 @@
 
         --linkColor: orange;
         --accentColor: orange;
+
+        --linkColor: #d29100;
+        --accentColor: #d29100;
+
 
         --menuBackgroundColor: rgba(255, 255, 255, 0.9);
         --menuLinkColor: #333;

@@ -21,7 +21,8 @@
     list-style: none;
     height: 100%;
     max-width: var(--menuMaxWidth);
-    padding: 0 0 5px 0;
+    padding: 0;
+    padding-bottom: 5px;
     margin: auto;
 }
 .menuToggle .input {
