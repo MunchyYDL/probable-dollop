@@ -8,7 +8,7 @@
 .layout .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: calc(100vh - 100px) 100px;
+    grid-template-rows: calc(100vh - var(--menuHeight)) var(--menuHeight);
     grid-template-areas:
         "main"
         "menu";
@@ -19,7 +19,6 @@
 .layout main {
     grid-area: main;
     position: relative;
-    padding: 0 20% 0 10%;
     width: 100%;
 
     display: grid;
@@ -27,7 +26,7 @@
 
     text-align: justify;
 
-    background-color: rgba(52, 70, 150, 0.6);
+    background-color: var(--mainBackgroundColor);
 
     /* Debugging */
     transition-duration: 400ms;
@@ -44,29 +43,21 @@
 
 .layout main > div {
     width: 100%;
-    padding: 20px 0 50px 0;
-    background-color: rgba(173, 37, 167, 0.6);
+    max-width: var(--mainMaxWidth);
+    padding: 20px 0px 50px 0px;
+    background-color: var(--contentBackgroundColor);
 }
-
-@media only screen and (max-width: 1150px) {
-
-    .layout main {
-        padding: 0 15% 0 15%;
-    }
-}
-
 
 @media only screen and (max-width: 900px) {
 
     .layout main {
-        padding: 0 10% 0 10%;
+        padding: 0 5% 0 5%;
     }
 }
 
 @media only screen and (max-width: 750px) {
 
     .layout .container {
-
         grid-template-rows: 38px 1fr;
         grid-template-areas:
             "menu"
@@ -76,14 +67,6 @@
     }
 
     .layout main {
-        padding: 0 10% 0 10%;
         height: 100%;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-
-    .layout main {
-        padding: 0 5% 0 5%;
     }
 }

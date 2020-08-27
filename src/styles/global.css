@@ -2,20 +2,30 @@
     --primaryBackgroundColor: #181619;
     --primaryColor: #f2f3eb;
 
+    --mainBackgroundColor: transparent;
+    --contentBackgroundColor: transparent;
+
     --linkColor: #d6cdf0;
 
     --menuBackgroundColor: #333;
     --menuLinkColor: #888;
     --accentColor: rgb(22, 115, 125);
 
-    --headerHeight: 0px;
-    --footerHeight: 100px;
     --mainHeight: 100vh;
+    --mainMaxWidth: 800px;
+    --menuHeight: 50px;
+    --menuActiveIndicatorHeight: 2px;
+    --menuMaxWidth: 650px;
 
     --fontWeight: 200;
 
     /* We prefer the dark scheme / theme */
     color-scheme: dark light;
+
+    /* DEBUGGING */
+    /* --mainBackgroundColor: rgba(52, 70, 150, 0.6); */
+    /* --contentBackgroundColor: rgba(173, 37, 167, 0.6); */
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,15 +34,11 @@
         --primaryBackgroundColor: #181619;
         --primaryColor: #f2f3eb;
 
-        --linkColor: #d6cdf0;
+        --linkColor: orange;
+        --accentColor: orange;
 
-        --menuBackgroundColor: #333;
+        --menuBackgroundColor: rgba(0, 0, 0, 0.9);
         --menuLinkColor: #888;
-        --accentColor: rgb(22, 115, 125);
-
-        --headerHeight: 0px;
-        --footerHeight: 100px;
-        --mainHeight: 100vh;
 
         --fontWeight: 200;
     }
@@ -41,19 +47,14 @@
 @media (prefers-color-scheme: light) {
 
     :root {
-        --primaryBackgroundColor: #f2f3eb;
+        --primaryBackgroundColor: #fafafc;
         --primaryColor: #1d1b18;
 
-        --linkColor: #8d6cf0;
+        --linkColor: orange;
+        --accentColor: orange;
 
-
-        --menuBackgroundColor: #888;
+        --menuBackgroundColor: rgba(255, 255, 255, 0.9);
         --menuLinkColor: #333;
-        --accentColor: rgb(20, 103, 112);
-
-        --headerHeight: 0px;
-        --footerHeight: 100px;
-        --mainHeight: 100vh;
 
         --fontWeight: 300;
     }
