@@ -1,14 +1,16 @@
 .index {
     display: grid;
-    place-items: center;
+    align-items: center;
+    justify-items: center;
     width: 100%;
 }
 
 .index svg {
     display: block;
     margin: auto;
-    width: 400px;
+    height: 400px;
     fill: currentColor;
+    margin-top: 50px;
 }
 
 .index h1 {
@@ -43,7 +45,6 @@
         font-size: 24px;
     }
 }
-
 @media only screen and (max-width: 700px) {
     .index svg {
         width: 300px;
@@ -55,7 +56,6 @@
         font-size: 20px;
     }
 }
-
 @media only screen and (max-width: 500px) {
     .index svg {
         width: 230px;
@@ -67,7 +67,6 @@
         font-size: 15px;
     }
 }
-
 @media only screen and (max-width: 300px) {
     .index svg {
         width: 150px;

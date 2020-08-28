@@ -5,19 +5,18 @@
 }
 
 .where_we_are .text {
-    z-index: 100;
+    z-index: 10;
 }
 
 .where_we_are svg {
-    z-index: 10;
-    position: absolute;
-    width: 70%;
-    top: -200px;
-    left: 15%;
+    z-index: 5;
+    width: 40%;
+    max-height: 370px;
     display: block;
     margin: auto;
-    /* background-color: rgba(0,0,0,0.9); */
-    fill: url(#gray-south-gradient) white;
+    margin-top: 50px;
+    /* background-color: rgba(0,0,0,0.6); */
+    fill: url(#gray-south-gradient) grey;
     transform: perspective(1000px) rotateX(45deg) scaleX(2.0);
-    transform-origin: bottom center;
+    transform-origin: top center;
 }

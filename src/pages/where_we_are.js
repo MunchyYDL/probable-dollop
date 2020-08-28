@@ -13,23 +13,30 @@ export default function WhereWeAre() {
       //viewBox="10 55 87 190"   // Whole map
       viewBox="10 155 57 90"   // South part of map
     >
-      <linearGradient id="gray-map-gradient" x2="0" y2="1">
-        <stop offset="0%" stop-color="#33333300" />
-        <stop offset="50%" stop-color="#333333ff" />
-        <stop offset="100%" stop-color="#555555ff" />
-      </linearGradient>
+      <defs>
+        <linearGradient id="gray-map-gradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#33333300" />
+          <stop offset="50%" stop-color="#333333ff" />
+          <stop offset="100%" stop-color="#555555ff" />
+        </linearGradient>
 
-      <linearGradient id="gray-south-gradient" x2="0" y2="1">
-        <stop offset="65%" stop-color="#55555500" />
-        <stop offset="80%" stop-color="#555555ff" />
-        <stop offset="100%" stop-color="#555555ff" />
-      </linearGradient>
+        <linearGradient id="gray-south-gradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="65%"  stop-color="#555555" stop-opacity="0.0"/>
+          <stop offset="80%"  stop-color="#555555" stop-opacity="1.0"/>
+          <stop offset="100%" stop-color="#555555" />
+        </linearGradient>
 
+        <g id="square">
+          <title>Square</title>
+          <desc>One tilted square</desc>
+          <path d="m 0.62865,-0.62865 0.62865,0.62865 -0.62865,0.62865 z" />
+        </g>
+      </defs>
 
       <g
         id="g49">
-        <path id="group1" fill="yellow" d="m 71.263183,62.168154 0.62865,-0.62865 0.62865,0.62865 -0.62865,0.62865 z" />
-
+        <path id="group1" fill="yellow" d="
+        m 71.263183,62.168154 0.62865,-0.62865 0.62865,0.62865 -0.62865,0.62865 z" />
 
         <path
           id="dots"
@@ -41,7 +48,6 @@ export default function WhereWeAre() {
   return (
     <Layout>
       <div className={styles.where_we_are}>
-        {map}
         <div className={styles.text}>
           <h1>Var vi finns</h1>
           <p>
@@ -49,6 +55,7 @@ export default function WhereWeAre() {
             men är självklart flexibla för uppdrag på annan ort alternativt distans.
           </p>
         </div>
+        {map}
       </div>
     </Layout>
   )

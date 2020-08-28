@@ -1,6 +1,7 @@
 .layout {
     display: grid;
-    place-items: center;
+    align-items: center;
+    justify-items: center;
     height: 100vh;
     width: 100vw;
 }
@@ -22,7 +23,8 @@
     width: 100%;
 
     display: grid;
-    place-items: center;
+    align-items: center;
+    justify-items: center;
 
     text-align: justify;
 
