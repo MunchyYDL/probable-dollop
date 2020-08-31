@@ -1,15 +1,20 @@
 :root {
     --primaryBackgroundColor: #181619;
     --primaryColor: #f2f3eb;
+    --secondaryColor: #666;
 
     --mainBackgroundColor: transparent;
     --contentBackgroundColor: transparent;
 
-    --linkColor: #d6cdf0;
-    --accentColor: rgb(22, 115, 125);
-
+    /* Old */
     --linkColor: #d29100;
     --accentColor: #d29100;
+
+    /* New */
+    --linkColor: #e69b00;
+    --accentColor: #e69b00;
+    --complementColor: rgb(10, 113, 209);
+    --linkColor: rgb(10, 113, 209);
 
     --menuBackgroundColor: rgba(0, 0, 0, 0.9);
     --menuLinkColor: #888;
@@ -37,12 +42,6 @@
         --primaryBackgroundColor: #181619;
         --primaryColor: #f2f3eb;
 
-        --linkColor: orange;
-        --accentColor: orange;
-
-        --linkColor: #d29100;
-        --accentColor: #d29100;
-
         --menuBackgroundColor: rgba(0, 0, 0, 0.9);
         --menuLinkColor: #888;
 
@@ -54,14 +53,9 @@
 
     :root {
         --primaryBackgroundColor: #fafafc;
+        --primaryBackgroundColor: #e7e9e6;  /* Test */
+        --primaryBackgroundColor: #f2f0f3;  /* Test */
         --primaryColor: #1d1b18;
-
-        --linkColor: orange;
-        --accentColor: orange;
-
-        --linkColor: #d29100;
-        --accentColor: #d29100;
-
 
         --menuBackgroundColor: rgba(255, 255, 255, 0.9);
         --menuLinkColor: #333;
