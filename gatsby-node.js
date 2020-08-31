@@ -48,7 +48,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
             phone,
             showContactInfo,
             location,
-            workTitle,
+            workTitles,
         } = person;
 
         // Just read the JSON and put it in?
