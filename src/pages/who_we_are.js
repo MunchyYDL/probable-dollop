@@ -42,7 +42,7 @@ fragment PersonDetails_smallImage on Person {
     email
     phone
     showContactInfo
-    workTitle
+    workTitles
     location
     image {
       childImageSharp {

@@ -40,7 +40,6 @@ fragment PersonDetails on Person {
   email
   phone
   showContactInfo
-  workTitle
   location
   image {
     childImageSharp {
