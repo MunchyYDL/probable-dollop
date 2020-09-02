@@ -2,19 +2,14 @@
     --primaryBackgroundColor: #181619;
     --primaryColor: #f2f3eb;
     --secondaryColor: #666;
-
-    --mainBackgroundColor: transparent;
-    --contentBackgroundColor: transparent;
-
-    /* Old */
-    --linkColor: #d29100;
-    --accentColor: #d29100;
-
-    /* New */
-    --linkColor: #e69b00;
     --accentColor: #e69b00;
     --complementColor: rgb(10, 113, 209);
-    --linkColor: rgb(10, 113, 209);
+    --complementColor: #006696;
+
+    /* --linkColor: #d29100;
+    --accentColor: #d29100; */
+
+    --linkColor: var(--complementColor);
 
     --menuBackgroundColor: rgba(0, 0, 0, 0.9);
     --menuLinkColor: #888;
@@ -30,6 +25,9 @@
     /* We prefer the dark scheme / theme */
     color-scheme: dark light;
 
+    --mainBackgroundColor: transparent;
+    --contentBackgroundColor: transparent;
+
     /* DEBUGGING */
     /* --mainBackgroundColor: rgba(52, 70, 150, 0.6); */
     /* --contentBackgroundColor: rgba(173, 37, 167, 0.6); */
@@ -41,6 +39,7 @@
     :root {
         --primaryBackgroundColor: #181619;
         --primaryColor: #f2f3eb;
+        --secondaryColor: #999;
 
         --menuBackgroundColor: rgba(0, 0, 0, 0.9);
         --menuLinkColor: #888;
@@ -52,10 +51,9 @@
 @media (prefers-color-scheme: light) {
 
     :root {
-        --primaryBackgroundColor: #fafafc;
-        --primaryBackgroundColor: #e7e9e6;  /* Test */
-        --primaryBackgroundColor: #f2f0f3;  /* Test */
+        --primaryBackgroundColor: #f2f3f0;  /* Test */
         --primaryColor: #1d1b18;
+        --secondaryColor: #555;
 
         --menuBackgroundColor: rgba(255, 255, 255, 0.9);
         --menuLinkColor: #333;
@@ -72,7 +70,8 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
-    font-weight: var(--fontWeight);;
+    font-weight: var(--fontWeight);
+    color: var(--accentColor);
 }
 
 body {

@@ -21,9 +21,9 @@ export default function WhereWeAre() {
         </linearGradient>
 
         <linearGradient id="gray-south-gradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="65%"  stop-color="#555555" stop-opacity="0.0"/>
-          <stop offset="80%"  stop-color="#555555" stop-opacity="1.0"/>
-          <stop offset="100%" stop-color="#555555" />
+          <stop offset="65%"  stop-color="var(--secondaryColor)" stop-opacity="0.0" />
+          <stop offset="80%"  stop-color="var(--secondaryColor)" stop-opacity="1.0" />
+          <stop offset="100%" stop-color="var(--secondaryColor)" stop-opacity="1.0" />
         </linearGradient>
 
         <g id="square">

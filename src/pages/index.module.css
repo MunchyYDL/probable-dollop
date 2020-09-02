@@ -14,6 +14,7 @@
 }
 
 .index h1 {
+    color: var(--primaryColor);
     font-size: 110px;
     font-weight: 100;
     text-align: center;

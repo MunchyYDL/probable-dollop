@@ -17,14 +17,14 @@ export default function Contact({ data }) {
           <div>
             <div>
               <h2>Region Väst</h2>
-              <h4>Göteborg</h4>
+              <p>Göteborg</p>
             </div>
             <Person person={data.sofie} showContactInfo={true} />
           </div>
           <div>
             <div>
               <h2>Region Öst</h2>
-              <h4>Norrköping, Linköping & Stockholm</h4>
+              <p>Norrköping, Linköping & Stockholm</p>
             </div>
             <Person person={data.erik} showContactInfo={true} />
           </div>
