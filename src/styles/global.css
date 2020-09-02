@@ -1,7 +1,7 @@
 :root {
     --primaryBackgroundColor: #181619;
     --primaryColor: #f2f3eb;
-    --secondaryColor: #666;
+    --secondaryColor: #999;
     --accentColor: #e69b00;
     --complementColor: rgb(10, 113, 209);
     --complementColor: #006696;
@@ -51,7 +51,7 @@
 @media (prefers-color-scheme: light) {
 
     :root {
-        --primaryBackgroundColor: #f2f3f0;  /* Test */
+        --primaryBackgroundColor: #eef0f0;
         --primaryColor: #1d1b18;
         --secondaryColor: #555;
 
