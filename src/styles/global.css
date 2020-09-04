@@ -1,14 +1,10 @@
 :root {
     --primaryBackgroundColor: #181619;
     --primaryColor: #f2f3eb;
+    --primaryColor: #eef0f0;
     --secondaryColor: #999;
     --accentColor: #e69b00;
-    --complementColor: rgb(10, 113, 209);
     --complementColor: #006696;
-
-    /* --linkColor: #d29100;
-    --accentColor: #d29100; */
-
     --linkColor: var(--complementColor);
 
     --menuBackgroundColor: rgba(0, 0, 0, 0.9);
@@ -39,6 +35,7 @@
     :root {
         --primaryBackgroundColor: #181619;
         --primaryColor: #f2f3eb;
+        --primaryColor: #eef0f0;
         --secondaryColor: #999;
 
         --menuBackgroundColor: rgba(0, 0, 0, 0.9);
@@ -53,7 +50,7 @@
     :root {
         --primaryBackgroundColor: #eef0f0;
         --primaryColor: #1d1b18;
-        --secondaryColor: #555;
+        --secondaryColor: #777;
 
         --menuBackgroundColor: rgba(255, 255, 255, 0.9);
         --menuLinkColor: #333;
@@ -71,8 +68,11 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     font-weight: var(--fontWeight);
+}
+h1 {
     color: var(--accentColor);
 }
+
 
 body {
     width: 100%;
