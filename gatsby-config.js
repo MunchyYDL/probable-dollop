@@ -6,7 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    siteUrl: `https://devbrains.se`,
+  },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-filesystem`,
