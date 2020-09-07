@@ -10,6 +10,12 @@ module.exports = {
     siteUrl: `https://devbrains.se`,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-transition-link`,
     {
@@ -37,6 +43,6 @@ module.exports = {
           },
         ]
       }
-    },        
+    },
   ],
 }
