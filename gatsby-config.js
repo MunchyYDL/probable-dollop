@@ -7,12 +7,12 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: '',
+    title: 'DevBrains',
     titleTemplate: "%s · DevBrains",
     description: 'DevBrains - Experter inom systemutveckling',
     image: '/images/DevBrains.jpg',
-    siteUrl: `http://devbrains.rf.gd`,
-    twitterUsername: 'DevBrains?'   // What to use here?
+    siteUrl: `https://devbrains.se`,
+    twitterUsername: '@DevBrains'   // What to use here?
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

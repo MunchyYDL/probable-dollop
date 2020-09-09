@@ -55,7 +55,7 @@ export const SEO = ({ title, description, image }) => {
 
       {/* Twitter card tags additive with the og: tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:domain" content="devbrains.rf.gd" />
+      <meta name="twitter:domain" content="devbrains.se" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:creator" content={seo.twitterHandle} />
