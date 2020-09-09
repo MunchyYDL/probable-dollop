@@ -1,33 +1,32 @@
 import React from "react"
-// import { StaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 import { NavBar } from "./"
 import styles from "./layout.module.css"
 
-export function Layout( props ) {
+export function Layout(props) {
 
-    const wrapper = props.background
+  const wrapper = props.background
     ? (
-        <BackgroundImage Tag="div" className={styles.container} fluid={props.background}>
-            <NavBar />
-            <main>
-                {props.children}
-            </main>
-        </BackgroundImage>
+      <BackgroundImage Tag="div" className={styles.container} fluid={props.background}>
+        <NavBar />
+        <main>
+          {props.children}
+        </main>
+      </BackgroundImage>
     )
     : (
-        <div className={styles.container}>
-            <NavBar />
-            <main>
-                {props.children}
-            </main>
-        </div>
+      <div className={styles.container}>
+        <NavBar />
+        <main>
+          {props.children}
+        </main>
+      </div>
     )
 
-    return (
-        <div className={`layout ${styles.layout}`}>
-            {wrapper}
-        </div>
-    )
+  return (
+    <div className={`layout ${styles.layout}`}>
+      {wrapper}
+    </div>
+  )
 }

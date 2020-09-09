@@ -1,10 +1,12 @@
 import React from "react"
 
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 
 import styles from "./where_we_are.module.css"
 
 export default function WhereWeAre() {
+
+  const pageTitle = 'Var vi finns';
 
   const map = (
     <svg
@@ -48,9 +50,10 @@ export default function WhereWeAre() {
 
   return (
     <Layout>
+      <SEO title={pageTitle} />
       <div className={styles.where_we_are}>
         <div className={styles.text}>
-          <h1>Var vi finns</h1>
+          <h1>{pageTitle}</h1>
           <p>
             Vi finns på plats i Norrköping, Linköping, Stockholm & Göteborg
             men är självklart flexibla för uppdrag på annan ort alternativt distans.

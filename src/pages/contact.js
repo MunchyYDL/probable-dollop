@@ -1,16 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { Layout, Person } from "../components"
+import { Layout, Person, SEO } from "../components"
 
 import styles from "./contact.module.css"
 
 export default function Contact({ data }) {
-  return (
 
+  const pageTitle = 'Kontakta Oss!'
+
+  return (
     <Layout>
+      <SEO title={pageTitle} />
       <div className={`contact ${styles.contact}`}>
-        <h1>Kontakta oss!</h1>
+        <h1>{pageTitle}</h1>
         <p>Vi finns på ett flertal orter, men tar även gärna uppdrag på distans.</p>
         <div className={styles.addresses}>
 

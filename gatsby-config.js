@@ -7,9 +7,15 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    siteUrl: `https://devbrains.se`,
+    title: '',
+    titleTemplate: "%s · DevBrains",
+    description: 'DevBrains - Experter inom systemutveckling',
+    image: '/images/DevBrains.jpg',
+    siteUrl: `http://devbrains.rf.gd`,
+    twitterUsername: 'DevBrains?'   // What to use here?
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

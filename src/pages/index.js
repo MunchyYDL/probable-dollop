@@ -1,9 +1,11 @@
 import React from "react"
 
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 import styles from "./index.module.css"
 
 export default function Home() {
+
+    const pageTitle = 'Hem'
 
     const head = (
         <svg
@@ -376,6 +378,7 @@ export default function Home() {
 
     return (
         <Layout>
+            <SEO title={pageTitle} />
             <div className={`index ${styles.index}`}>
                 <div>
                     {head}

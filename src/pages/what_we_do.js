@@ -1,13 +1,16 @@
 import React from "react"
 
-import { Layout } from "../components"
+import { Layout, SEO } from "../components"
 
 export default function WhatWeDo() {
 
+  const pageTitle = 'Var vi finns';
+
   return (
     <Layout>
+      <SEO title={pageTitle} />
       <div>
-        <h1>Vad vi gör</h1>
+        <h1>{pageTitle}</h1>
         <p>
           Vi är ett gäng ödmjuka specialister inom systemutveckling (och en projektledare)
           som gärna vill dela med oss av våra kunskaper och erfarenheter genom att erbjuda
@@ -25,7 +28,7 @@ export default function WhatWeDo() {
           öppen och varm lagkänsla och kunskapsutveckling i teamet, något som vi tror bidrar till
           ett bättre resultat.
         </p>
-        
+
         {/* <p>Buzzwords och tekniker som vi behärskar @Marcus fyll på?</p>
         <ul>
           <li>SAFe 5.0</li>
