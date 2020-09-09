@@ -7,7 +7,7 @@ import styles from "./contact.module.css"
 
 export default function Contact({ data }) {
 
-  const pageTitle = 'Kontakta Oss!'
+  const pageTitle = 'Kontakta oss!'
 
   return (
     <Layout>

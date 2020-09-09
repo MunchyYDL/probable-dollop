@@ -4,7 +4,7 @@ import { Layout, SEO } from "../components"
 
 export default function WhatWeDo() {
 
-  const pageTitle = 'Var vi finns';
+  const pageTitle = 'Vad vi gör';
 
   return (
     <Layout>
