@@ -2,7 +2,6 @@
     --animDuration: 400ms;
 }
 .nav {
-    grid-area: menu;
     position: fixed;
     top: calc(100vh - var(--menuHeight));
     height: var(--menuHeight);

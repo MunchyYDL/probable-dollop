@@ -14,6 +14,8 @@ export function Person({person, showContactInfo = false}) {
         )
         : null;
 
+        const workTitles = renderWorkTitles(person.workTitles);
+
         // Handle faulty conversion in development sometimes
         const image = person.image.childImageSharp && person.image.childImageSharp.fixed;
 
@@ -21,11 +23,25 @@ export function Person({person, showContactInfo = false}) {
         <div className={styles.person}>
             <Img fixed={image} alt={person.name} />
             <h3>{person.name}</h3>
-            <p>
-                {person.workTitle}<br/>
-                {person.location}<br/>
-            </p>
+            {person.location}<br/>
+            {workTitles}
             {contactDetails}
         </div>
     )
+}
+
+function renderWorkTitles(titles) {
+    
+    if(titles == null) {
+        return null;
+    }
+
+    const items = titles.map((title) =>
+        <li>{title}</li>
+    );
+
+    return (
+        <ul>
+            {items}
+        </ul>);
 }

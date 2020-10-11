@@ -6,7 +6,24 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: 'DevBrains',
+    titleTemplate: "%s · DevBrains",
+    description: 'DevBrains - Experter inom systemutveckling',
+    image: '/images/DevBrains.jpg',
+    siteUrl: `https://devbrains.se`,
+    twitterUsername: '@DevBrains'   // What to use here?
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,6 +49,6 @@ module.exports = {
           },
         ]
       }
-    },        
+    },
   ],
 }

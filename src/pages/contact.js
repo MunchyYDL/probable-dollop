@@ -1,30 +1,33 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import { Layout, Person } from "../components"
+import { Layout, Person, SEO } from "../components"
 
 import styles from "./contact.module.css"
 
 export default function Contact({ data }) {
-  return (
 
+  const pageTitle = 'Kontakta oss!'
+
+  return (
     <Layout>
+      <SEO title={pageTitle} />
       <div className={`contact ${styles.contact}`}>
-        <h1>Kontakta oss!</h1>
+        <h1>{pageTitle}</h1>
         <p>Vi finns på ett flertal orter, men tar även gärna uppdrag på distans.</p>
         <div className={styles.addresses}>
 
           <div>
             <div>
               <h2>Region Väst</h2>
-              <h4>Göteborg</h4>
+              <p>Göteborg</p>
             </div>
             <Person person={data.sofie} showContactInfo={true} />
           </div>
           <div>
             <div>
               <h2>Region Öst</h2>
-              <h4>Norrköping, Linköping & Stockholm</h4>
+              <p>Norrköping, Linköping & Stockholm</p>
             </div>
             <Person person={data.erik} showContactInfo={true} />
           </div>
@@ -40,7 +43,6 @@ fragment PersonDetails on Person {
   email
   phone
   showContactInfo
-  workTitle
   location
   image {
     childImageSharp {

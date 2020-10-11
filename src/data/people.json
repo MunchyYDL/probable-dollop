@@ -5,10 +5,12 @@
 
         "email": "andreas.edfast@devbrains.se",
 
-        "location": "Stockholm",
+        "workTitles" : [
+            "Fullstackutvecklare",
+            "Mjukvaruarkitekt"
+        ],
 
-        "workTitle" : "Systemutvecklare"
-
+        "location": "Stockholm"
     },
     {
         "name": "Andreas Ingman",
@@ -16,10 +18,12 @@
 
         "email": "andreas.ingman@devbrains.se",
 
-        "location": "Stockholm",
+        "workTitles" : [
+            "Fullstackutvecklare",
+            "Webbutvecklare"
+        ],
 
-        "workTitle" : "Systemutvecklare"
-
+        "location": "Linköping"
     },
     {
         "name": "Erik Fremred",
@@ -29,10 +33,12 @@
         "phone": "+46 76 010 21 04",
         "showContactInfo": true,
 
-        "location": "Norrköping",
+        "workTitles" : [
+            "Fullstackutvecklare",
+            "Mjukvaruarkitekt"
+        ],
 
-        "workTitle" : "Systemutvecklare"
-
+        "location": "Norrköping"
     },
     {
         "name": "Johan Karlsteen",
@@ -40,9 +46,13 @@
 
         "email": "johan.karlsteen@devbrains.se",
 
-        "location": "Linköping",
+        "workTitles" : [
+            "Fullstackutvecklare",
+            "Salesforcearkitekt",
+            "Salesforceutvecklare"
+        ],
 
-        "workTitle" : "Systemutvecklare"
+        "location": "Stockholm"
     },
     {
         "name": "Marcus Christensen",
@@ -52,7 +62,9 @@
         "email": "marcus.christensen@devbrains.se",
         "phone": "+46 733 400 370",
 
-        "workTitle" : "Systemutvecklare",
+        "workTitles" : [
+            "Fullstackutvecklare"
+        ],
 
         "location": "Göteborg",
         "region": "Väst"
@@ -63,7 +75,11 @@
 
         "email": "martin.oom@devbrains.se",
 
-        "workTitle" : "Systemutvecklare",
+        "workTitles" : [
+            "Systemutvecklare",
+            "Arkitekt"
+        ],
+
 
         "location": "Göteborg",
         "region": "Väst"
@@ -76,7 +92,10 @@
         "phone": "+46 70 874 20 71",
         "showContactInfo": true,
 
-        "workTitle" : "Projektledare & Agile Coach",
+        "workTitles" : [
+            "Projektledare",
+            "Agile Coach"
+        ],
 
         "location": "Göteborg",
         "region": "Väst"

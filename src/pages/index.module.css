@@ -8,12 +8,13 @@
 .index svg {
     display: block;
     margin: auto;
-    height: 400px;
-    fill: currentColor;
+    height: 300px;
+    fill: var(--secondaryColor);
     margin-top: 50px;
 }
 
 .index h1 {
+    color: var(--primaryColor);
     font-size: 110px;
     font-weight: 100;
     text-align: center;
@@ -26,6 +27,7 @@
     text-transform: uppercase;
     text-align: center;
     margin-top: 0;
+    color: var(--accentColor);
 }
 
 /* DEBUGGING */

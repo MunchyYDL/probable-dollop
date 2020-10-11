@@ -16,7 +16,7 @@
     margin: auto;
     margin-top: 50px;
     /* background-color: rgba(0,0,0,0.6); */
-    fill: url(#gray-south-gradient) grey;
+    /* overflow: visible; */
     transform: perspective(1000px) rotateX(45deg) scaleX(2.0);
-    transform-origin: top center;
+    transform-origin: center top;
 }
