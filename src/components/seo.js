@@ -23,7 +23,7 @@ export const SEO = ({ title, description, image }) => {
     description: description || defaultDescription,
     image: {
       url: `${siteUrl}${image || defaultImage}`,
-      alt: 'DevBrains',
+      alt: "DevBrains",
       width: 1280,
       height: 720,
     },
@@ -32,12 +32,12 @@ export const SEO = ({ title, description, image }) => {
   }
 
   return (
-    <Helmet 
-        title={seo.title}
-        titleTemplate={titleTemplate}
-        htmlAttributes={{
-            lang: "sv"
-        }}    
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{
+        lang: "sv",
+      }}
     >
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image.url} />
@@ -61,7 +61,6 @@ export const SEO = ({ title, description, image }) => {
       <meta name="twitter:creator" content={seo.twitterHandle} />
       <meta name="twitter:image" content={seo.image.url} />
       <meta name="twitter:image:alt" content={seo.image.alt} />
-
     </Helmet>
   )
 }
