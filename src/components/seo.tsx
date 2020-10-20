@@ -1,10 +1,15 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-export const SEO = ({ title, description, image }) => {
+interface SEOProps {
+  title: string
+  description?: string
+  image?: string
+}
+
+export const SEO = ({ title, description, image }: SEOProps) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -17,8 +22,21 @@ export const SEO = ({ title, description, image }) => {
     twitterUsername,
   } = site.siteMetadata
 
+  interface SEOData {
+    title: string
+    description: string
+    image: {
+      url: string
+      alt: string
+      width: number
+      height: number
+    }
+    url: string
+    twitterHandle: string
+  }
+
   // Construct object with defaults or overrides
-  const seo = {
+  const seo: SEOData = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: {
@@ -50,8 +68,8 @@ export const SEO = ({ title, description, image }) => {
       <meta property="og:site_name" content="DevBrains" />
       <meta property="og:image" content={seo.image.url} />
       <meta property="og:image.alt" content={seo.image.alt} />
-      <meta property="og:image:width" content={seo.image.width} />
-      <meta property="og:image:height" content={seo.image.height} />
+      <meta property="og:image:width" content={seo.image.width.toString()} />
+      <meta property="og:image:height" content={seo.image.height.toString()} />
 
       {/* Twitter card tags additive with the og: tags */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -63,20 +81,6 @@ export const SEO = ({ title, description, image }) => {
       <meta name="twitter:image:alt" content={seo.image.alt} />
     </Helmet>
   )
-}
-
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  article: PropTypes.bool,
-}
-
-SEO.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-  article: false,
 }
 
 const query = graphql`

@@ -1,4 +1,5 @@
 import React from "react"
+
 import { Layout, SEO } from "../components"
 import Head from "../svg/head.inline.svg"
 import styles from "./index.module.css"

@@ -15,6 +15,12 @@ module.exports = {
     twitterUsername: "@DevBrains", // What to use here?
   },
   plugins: [
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
@@ -23,24 +29,12 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-transition-link`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-fonts-v2`,
       options: {

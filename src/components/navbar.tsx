@@ -1,5 +1,6 @@
 import React from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import styles from "./navbar.module.css"
 
 export const NavBar = () => (

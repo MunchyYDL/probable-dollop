@@ -1,9 +1,10 @@
 import React from "react"
+
 import { Layout, SEO } from "../components"
 
-const Error404 = () => (
+const Error404NotFound = () => (
   <Layout>
-    <SEO title="404" />
+    <SEO title="404: Not Found" />
     <div>
       <h1>Oj då!</h1>
       <p>Sidan du söker kan inte hittas! :(</p>
@@ -11,4 +12,4 @@ const Error404 = () => (
   </Layout>
 )
 
-export default Error404
+export default Error404NotFound

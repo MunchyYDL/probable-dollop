@@ -1,9 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Layout, Person, SEO } from "../components"
+
+import { Layout, PersonCard, SEO } from "../components"
 import styles from "./contact.module.css"
 
-const Contact = ({ data, pageTitle = "Kontakta oss!" }) => (
+interface PageProps {
+  data?: any
+  pageTitle: string
+}
+
+const Contact = ({ data, pageTitle = "Kontakta oss!" }: PageProps) => (
   <Layout>
     <SEO title={pageTitle} />
     <div className={`contact ${styles.contact}`}>
@@ -17,14 +23,14 @@ const Contact = ({ data, pageTitle = "Kontakta oss!" }) => (
             <h2>Region Väst</h2>
             <p>Göteborg</p>
           </div>
-          <Person person={data.sofie} showContactInfo={true} />
+          <PersonCard person={data.sofie} showContactInfo={true} />
         </div>
         <div>
           <div>
             <h2>Region Öst</h2>
             <p>Norrköping, Linköping & Stockholm</p>
           </div>
-          <Person person={data.erik} showContactInfo={true} />
+          <PersonCard person={data.erik} showContactInfo={true} />
         </div>
       </div>
     </div>
