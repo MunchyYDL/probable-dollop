@@ -1,8 +1,8 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 
 import { Layout, SEO } from "../components"
 
-const Error404NotFound = () => (
+const Error404NotFound: FunctionComponent = () => (
   <Layout>
     <SEO title="404: Not Found" />
     <div>

@@ -1,13 +1,13 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 
 import { Layout, SEO } from "../components"
 import Map from "../svg/map.inline.svg"
 import styles from "./where_we_are.module.css"
 import { DefaultPageProps } from "./DefaultPageProps"
 
-interface Props extends DefaultPageProps {}
-
-const WhereWeAre = ({ pageTitle = "Var vi finns" }: Props) => (
+const WhereWeAre: FunctionComponent<DefaultPageProps> = ({
+  pageTitle = "Var vi finns",
+}) => (
   <Layout>
     <SEO title={pageTitle} />
     <div className={styles.where_we_are}>

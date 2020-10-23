@@ -1,9 +1,33 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./navbar.module.css"
 
-export const NavBar = () => (
+interface LinkProps {
+  to: string
+  title: string
+}
+
+const Link: FunctionComponent<LinkProps> = props => (
+  <AniLink
+    fade
+    className={styles.link}
+    activeClassName={styles.activeLink}
+    to={props.to}
+  >
+    {props.title}
+  </AniLink>
+)
+
+const links = [
+  { to: "/", title: "Hem" },
+  { to: "/what_we_do", title: "Vad vi gör" },
+  { to: "/who_we_are", title: "Vilka vi är" },
+  { to: "/where_we_are", title: "Var vi finns" },
+  { to: "/contact", title: "Kontakta oss!" },
+]
+
+export const NavBar: FunctionComponent = () => (
   <nav className={styles.nav}>
     <div className={styles.menuToggle}>
       <input className={styles.input} type="checkbox" />
@@ -11,56 +35,11 @@ export const NavBar = () => (
       <span className={styles.span} />
       <span className={styles.span} />
       <ul className={styles.menu}>
-        <li>
-          <AniLink
-            fade
-            className={styles.link}
-            activeClassName={styles.activeLink}
-            to="/"
-          >
-            Hem
-          </AniLink>
-        </li>
-        <li>
-          <AniLink
-            fade
-            className={styles.link}
-            activeClassName={styles.activeLink}
-            to="/what_we_do"
-          >
-            Vad vi gör
-          </AniLink>
-        </li>
-        <li>
-          <AniLink
-            fade
-            className={styles.link}
-            activeClassName={styles.activeLink}
-            to="/who_we_are"
-          >
-            Vilka vi är
-          </AniLink>
-        </li>
-        <li>
-          <AniLink
-            fade
-            className={styles.link}
-            activeClassName={styles.activeLink}
-            to="/where_we_are"
-          >
-            Var vi finns
-          </AniLink>
-        </li>
-        <li>
-          <AniLink
-            fade
-            className={styles.link}
-            activeClassName={styles.activeLink}
-            to="/contact"
-          >
-            Kontakta oss!
-          </AniLink>
-        </li>
+        {links.map(link => (
+          <li key={link.to}>
+            <Link to={link.to} title={link.title} />
+          </li>
+        ))}
       </ul>
     </div>
   </nav>

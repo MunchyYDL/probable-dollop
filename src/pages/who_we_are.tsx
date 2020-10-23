@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import { graphql } from "gatsby"
 
 import { Person } from "../data/people/Person"
@@ -6,7 +6,7 @@ import { Layout, PersonCard, SEO } from "../components"
 import styles from "./who_we_are.module.css"
 import { DefaultPageProps } from "./DefaultPageProps"
 
-interface Props extends DefaultPageProps {
+interface WhoWeAreProps extends DefaultPageProps {
   data: QueryData
   people: PersonNode[]
 }
@@ -22,15 +22,15 @@ interface QueryData {
 }
 
 const getPerson = (data: PersonNode[], name: string) => {
-  let index = data.findIndex((x: PersonNode) => x.node.name === name)
+  const index = data.findIndex((x: PersonNode) => x.node.name === name)
   return data[index].node
 }
 
-const WhoWeAre = ({
+const WhoWeAre: FunctionComponent<WhoWeAreProps> = ({
   data,
   pageTitle = "Vilka vi är",
   people = data.allPerson.edges,
-}: Props) => (
+}) => (
   <Layout>
     <SEO title={pageTitle} />
     <div className={styles.who_we_are}>

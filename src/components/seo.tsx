@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
@@ -9,7 +9,11 @@ interface SEOProps {
   image?: string
 }
 
-export const SEO = ({ title, description, image }: SEOProps) => {
+export const SEO: FunctionComponent<SEOProps> = ({
+  title,
+  description,
+  image,
+}) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 

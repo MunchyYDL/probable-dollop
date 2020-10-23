@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import { graphql } from "gatsby"
 
 import { Person } from "../data/people/Person"
@@ -6,14 +6,17 @@ import { Layout, PersonCard, SEO } from "../components"
 import styles from "./contact.module.css"
 import { DefaultPageProps } from "./DefaultPageProps"
 
-interface Props extends DefaultPageProps {
+interface ContactProps extends DefaultPageProps {
   data: {
     erik: Person
     sofie: Person
   }
 }
 
-const Contact = ({ data, pageTitle = "Kontakta oss!" }: Props) => (
+const Contact: FunctionComponent<ContactProps> = ({
+  data,
+  pageTitle = "Kontakta oss!",
+}) => (
   <Layout>
     <SEO title={pageTitle} />
     <div className={`contact ${styles.contact}`}>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 import Img from "gatsby-image"
 
 import { Person, PersonWorkTitles } from "../data/people/Person"
@@ -9,7 +9,7 @@ interface PersonCardProps {
   showContactInfo?: boolean
 }
 
-const WorkTitles = ({ workTitles }: PersonWorkTitles) =>
+const WorkTitles: FunctionComponent<PersonWorkTitles> = ({ workTitles }) =>
   workTitles ? (
     <ul>
       {workTitles.map(title => (
@@ -18,7 +18,10 @@ const WorkTitles = ({ workTitles }: PersonWorkTitles) =>
     </ul>
   ) : null
 
-const ContactDetails = ({ person, showContactInfo }: PersonCardProps) =>
+const ContactDetails: FunctionComponent<PersonCardProps> = ({
+  person,
+  showContactInfo,
+}) =>
   showContactInfo && person.showContactInfo ? (
     <p>
       <a href={`tel:${person.phone}`}>{person.phone}</a>
@@ -28,10 +31,10 @@ const ContactDetails = ({ person, showContactInfo }: PersonCardProps) =>
     </p>
   ) : null
 
-export const PersonCard = ({
+export const PersonCard: FunctionComponent<PersonCardProps> = ({
   person,
   showContactInfo = false,
-}: PersonCardProps) => {
+}) => {
   // Handle faulty conversion in development sometimes
   const fixedImage = person?.image?.childImageSharp?.fixed
 

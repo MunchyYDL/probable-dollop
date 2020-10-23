@@ -1,11 +1,11 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 
 import { Layout, SEO } from "../components"
 import { DefaultPageProps } from "./DefaultPageProps"
 
-interface Props extends DefaultPageProps {}
-
-const WhatWeDo = ({ pageTitle = "Vad vi gör" }: Props) => (
+const WhatWeDo: FunctionComponent<DefaultPageProps> = ({
+  pageTitle = "Vad vi gör",
+}) => (
   <Layout>
     <SEO title={pageTitle} />
     <div>

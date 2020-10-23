@@ -1,13 +1,9 @@
-import React from "react"
+import React, { FunctionComponent } from "react"
 
 import { NavBar } from "."
 import styles from "./layout.module.css"
 
-interface LayoutProps {
-  children?: any
-}
-
-export const Layout = (props: LayoutProps) => (
+export const Layout: FunctionComponent = props => (
   <div className={styles.layout}>
     <div className={styles.container}>
       <NavBar />
