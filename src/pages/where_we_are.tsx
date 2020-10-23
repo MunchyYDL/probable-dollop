@@ -1,9 +1,13 @@
 import React from "react"
+
 import { Layout, SEO } from "../components"
 import Map from "../svg/map.inline.svg"
 import styles from "./where_we_are.module.css"
+import { DefaultPageProps } from "./DefaultPageProps"
 
-const WhereWeAre = ({ pageTitle = "Var vi finns" }) => (
+interface Props extends DefaultPageProps {}
+
+const WhereWeAre = ({ pageTitle = "Var vi finns" }: Props) => (
   <Layout>
     <SEO title={pageTitle} />
     <div className={styles.where_we_are}>

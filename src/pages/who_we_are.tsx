@@ -4,6 +4,12 @@ import { graphql } from "gatsby"
 import { Person } from "../data/people/Person"
 import { Layout, PersonCard, SEO } from "../components"
 import styles from "./who_we_are.module.css"
+import { DefaultPageProps } from "./DefaultPageProps"
+
+interface Props extends DefaultPageProps {
+  data: QueryData
+  people: PersonNode[]
+}
 
 interface PersonNode {
   node: Person
@@ -15,12 +21,6 @@ interface QueryData {
   }
 }
 
-interface PageProps {
-  data: QueryData
-  pageTitle: string
-  people: PersonNode[]
-}
-
 const getPerson = (data: PersonNode[], name: string) => {
   let index = data.findIndex((x: PersonNode) => x.node.name === name)
   return data[index].node
@@ -30,7 +30,7 @@ const WhoWeAre = ({
   data,
   pageTitle = "Vilka vi är",
   people = data.allPerson.edges,
-}: PageProps) => (
+}: Props) => (
   <Layout>
     <SEO title={pageTitle} />
     <div className={styles.who_we_are}>

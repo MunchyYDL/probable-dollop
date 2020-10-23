@@ -1,15 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
 
+import { Person } from "../data/people/Person"
 import { Layout, PersonCard, SEO } from "../components"
 import styles from "./contact.module.css"
+import { DefaultPageProps } from "./DefaultPageProps"
 
-interface PageProps {
-  data?: any
-  pageTitle: string
+interface Props extends DefaultPageProps {
+  data: {
+    erik: Person
+    sofie: Person
+  }
 }
 
-const Contact = ({ data, pageTitle = "Kontakta oss!" }: PageProps) => (
+const Contact = ({ data, pageTitle = "Kontakta oss!" }: Props) => (
   <Layout>
     <SEO title={pageTitle} />
     <div className={`contact ${styles.contact}`}>

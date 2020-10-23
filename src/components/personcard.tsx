@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { Person, PersonWorkTitles } from "../data/people/Person"
 import styles from "./personcard.module.css"
 
-interface PersonProps {
+interface PersonCardProps {
   person: Person
   showContactInfo?: boolean
 }
@@ -18,7 +18,7 @@ const WorkTitles = ({ workTitles }: PersonWorkTitles) =>
     </ul>
   ) : null
 
-const ContactDetails = ({ person, showContactInfo }: PersonProps) =>
+const ContactDetails = ({ person, showContactInfo }: PersonCardProps) =>
   showContactInfo && person.showContactInfo ? (
     <p>
       <a href={`tel:${person.phone}`}>{person.phone}</a>
@@ -31,7 +31,7 @@ const ContactDetails = ({ person, showContactInfo }: PersonProps) =>
 export const PersonCard = ({
   person,
   showContactInfo = false,
-}: PersonProps) => {
+}: PersonCardProps) => {
   // Handle faulty conversion in development sometimes
   const fixedImage = person?.image?.childImageSharp?.fixed
 

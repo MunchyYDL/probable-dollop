@@ -1,7 +1,11 @@
 import React from "react"
-import { Layout, SEO } from "../components"
 
-const WhatWeDo = ({ pageTitle = "Vad vi gör" }) => (
+import { Layout, SEO } from "../components"
+import { DefaultPageProps } from "./DefaultPageProps"
+
+interface Props extends DefaultPageProps {}
+
+const WhatWeDo = ({ pageTitle = "Vad vi gör" }: Props) => (
   <Layout>
     <SEO title={pageTitle} />
     <div>
